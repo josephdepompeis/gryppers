@@ -1,5 +1,6 @@
 //Define an angular module for our app
-var sampleApp = angular.module('sampleApp', []);
+// var sampleApp = angular.module('sampleApp', []);
+var sampleApp = angular.module('sampleApp', ['ngRoute']);
 
 //Define Routing for app
 //Uri /AddNewOrder -> template AddOrder.html and Controller AddOrderController

@@ -59,7 +59,7 @@ sampleApp.controller('JoeOrdersController', function($scope, $http) {
   });
 
 
-
+// $scope.battle = 
 
 
 

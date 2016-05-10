@@ -19,9 +19,9 @@ Choose your fighter!
 
 
 <form name="myForm" ng-controller="JoeOrdersController" class="my-form">
-  userType: <input name="input" ng-model="userType" required>
+  Playing As: <input name="input" ng-model="playingAs" required>
   <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
-  <code>userType = {{userType}}</code><br>
+  <code>playingAs = {{playingAs}}</code><br>
   <!-- <code>myForm.input.$valid = {{myForm.input.$valid}}</code><br>
   <code>myForm.input.$error = {{myForm.input.$error}}</code><br>
   <code>myForm.$valid = {{myForm.$valid}}</code><br>
@@ -29,12 +29,12 @@ Choose your fighter!
   <code>
  </form>
 
- <div ng-if="userType == 1">
+ <div ng-if="playingAs == 1">
     <!-- code to render a large video block-->
       <div > small boners </div>
       {{ character_one }}
 </div>
-<div ng-if="userType != 1">
+<div ng-if="playingAs != 1">
     <!-- code to render the regular video block -->
     <div > boner! </div>
 </div>
@@ -44,9 +44,9 @@ Choose your fighter!
 
 
 <form name="myForm" ng-controller="JoeOrdersController" class="my-form">
-  userType: <input name="input" ng-model="userType2" required>
+  Against: <input name="input" ng-model="playingAgainst" required>
   <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
-  <code>userType2 = {{userType2}}</code><br>
+  <code>playingAgainst = {{playingAgainst}}</code><br>
   <!-- <code>myForm.input.$valid = {{myForm.input.$valid}}</code><br>
   <code>myForm.input.$error = {{myForm.input.$error}}</code><br>
   <code>myForm.$valid = {{myForm.$valid}}</code><br>
@@ -54,12 +54,20 @@ Choose your fighter!
   <code>
  </form>
 
- <div ng-if="userType2 == 1">
+ <div ng-if="playingAgainst == 1">
     <!-- code to render a large video block-->
       <div > small boners </div>
       {{ character_two }}
 </div>
-<div ng-if="userType != 1">
+<div ng-if="playingAgainst != 1">
     <!-- code to render the regular video block -->
     <div > boner! </div>
 </div>
+
+
+ <div ng-if="playingAs >= 1">
+   <div ng-if="playingAgainst >= 1">
+     <code>playingAs = {{playingAs}}</code>
+     <code>playingAgainst = {{playingAgainst}}</code>
+   </div>
+ </div>

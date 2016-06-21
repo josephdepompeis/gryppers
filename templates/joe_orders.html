@@ -34,6 +34,11 @@ Choose your fighter!
       <div > small boners </div>
       {{ character_one }}
 </div>
+<div ng-if="playingAs == 2">
+   <!-- code to render a large video block-->
+     <div > small boners </div>
+     {{ character_two }}
+</div>
 <div ng-if="playingAs != 1">
     <!-- code to render the regular video block -->
     <div > boner! </div>
@@ -54,11 +59,19 @@ Choose your fighter!
   <code>
  </form>
 
- <div ng-if="playingAgainst == 1">
+ <div ng-if="playingAgainst == 2">
     <!-- code to render a large video block-->
       <div > small boners </div>
       {{ character_two }}
 </div>
+
+<div ng-if="playingAgainst == 1">
+   <!-- code to render a large video block-->
+     <div > small boners </div>
+     {{ character_one }}
+</div>
+
+
 <div ng-if="playingAgainst != 1">
     <!-- code to render the regular video block -->
     <div > boner! </div>
@@ -71,3 +84,27 @@ Choose your fighter!
      <code>playingAgainst = {{playingAgainst}}</code>
    </div>
  </div>
+
+
+
+
+ <div ng-app="myMatchForm" ng-controller="JoeOrdersController">
+  <!-- call $scope.search() when submit is clicked. -->
+  <form ng-submit="search()">
+    <!-- will automatically update $scope.user.first_name and .last_name -->
+    <input type="text" ng-model="user.first_name">
+    <input type="text" ng-model="user.last_name">
+    <input type="submit" value="Search">
+  </form>
+
+  <div>
+    Results:
+    <ul>
+      <!-- assuming our search returns an array of users matching the search -->
+      <li ng-repeat="user in results">
+         {{user.first_name}} {{user.last_name}}
+      </li>
+    </ul>
+  </div>
+
+</div>

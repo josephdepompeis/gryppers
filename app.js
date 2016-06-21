@@ -34,7 +34,30 @@ sampleApp.controller('AddOrderController', function($scope) {
 });
 
 
-sampleApp.controller('ShowOrdersController', function($scope) {
+// sampleApp.controller('ShowOrdersController', function($scope) {
+sampleApp.controller('ShowOrdersController', function($scope, $http) {
+
+
+
+    // .controller('MyCtrl', ['$scope', '$http', function($scope, $http) {
+      $scope.user    = {};
+      $scope.results = [];
+    //
+      // $scope.search = function() {
+    // //     /* the $http service allows you to make arbitrary ajax requests.
+    // //      * in this case you might also consider using angular-resource and setting up a
+    // //      * User $resource. */
+    //     $http.get('/your/url/search', { params: user },
+    //       function(response) { $scope.results = response; },
+    //       function(failure) { console.log("failed :(", failure); });
+      // });
+    // });
+
+    //   $scope.search = function() {
+
+
+
+
 
 	$scope.message = 'This is Show orders screen';
 
@@ -42,6 +65,7 @@ sampleApp.controller('ShowOrdersController', function($scope) {
 
 
 sampleApp.controller('JoeOrdersController', function($scope, $http) {
+  //   .controller('MyCtrl', ['$scope', '$http', function($scope, $http) {
 
 	$scope.message = 'This is JOE orders screen';
   $http.get('http://localhost:3001/characters/1.json').then(function success(response){
@@ -58,9 +82,37 @@ sampleApp.controller('JoeOrdersController', function($scope, $http) {
       console.log('GET failed in appController');
   });
 
+      //
+      // $scope.user    = {};
+      // $scope.results = [];
 
-// $scope.battle = 
-
+          // $scope.search = function() {
+        //     /* the $http service allows you to make arbitrary ajax requests.
+        //      * in this case you might also consider using angular-resource and setting up a
+        //      * User $resource. */
+        //     $http.get('/your/url/search', { params: user },
+        //       function(response) { $scope.results = response; },
+        //       function(failure) { console.log("failed :(", failure); });
+          // });
+        // });
 
 
 });
+
+
+//
+//
+// angular.module('MyApp', [])
+//   .controller('MyCtrl', ['$scope', '$http', function($scope, $http) {
+//     $scope.user    = {};
+//     $scope.results = [];
+//
+//     $scope.search = function() {
+//       /* the $http service allows you to make arbitrary ajax requests.
+//        * in this case you might also consider using angular-resource and setting up a
+//        * User $resource. */
+//       $http.get('/your/url/search', { params: user },
+//         function(response) { $scope.results = response; },
+//         function(failure) { console.log("failed :(", failure); });
+//     });
+//   });
